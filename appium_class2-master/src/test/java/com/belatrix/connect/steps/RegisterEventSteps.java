@@ -1,5 +1,7 @@
 package com.belatrix.connect.steps;
 
+import static org.testng.Assert.assertEquals;
+
 import com.belatrix.connect.framework.ParentScenario;
 
 import cucumber.api.java.en.And;
@@ -24,6 +26,19 @@ public class RegisterEventSteps extends ParentScenario{
 	 {
 		 eventDetailPage.ClickRegister();
 		 alertMessageTwoOptions.answerYes();
+		 assertEquals(alertMessageTwoOptions.getMessageText(), "Event registration confirmed");
+		 System.out.println("Registro exitoso");
+		 alertMessageTwoOptions.waitForContainer();
+		 alertMessageTwoOptions.answerYes();
+	 }
+	 
+	 @And("^I unregister for halloween event$")
+	 public void I_unregister_for_halloween_event()
+	 {
+		 eventDetailPage.ClickRegister();
+		 alertMessageTwoOptions.answerYes();
+		 assertEquals(alertMessageTwoOptions.getMessageText(), "Event unregistration confirmed");
+		 System.out.println("Des-registro exitoso");
 		 alertMessageTwoOptions.waitForContainer();
 		 alertMessageTwoOptions.answerYes();
 	 }

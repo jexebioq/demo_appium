@@ -20,6 +20,7 @@ public class AlertMessageTwoOptions extends ParentPage {
             id("android:id/button1");
     By NO_OPTION = By.
             id("android:id/button2");
+    By MESSAGE_TEXT = By.id("android:id/message");
 
     /**
      * This a method is for wait load the message alert
@@ -33,6 +34,11 @@ public class AlertMessageTwoOptions extends ParentPage {
     public void waitForContainer()
     {
     	  handlingWaitToElement(CONTEINER_MESSAGE);
+    }
+    
+    public String getMessageText()
+    {
+    	return getElementValue(MESSAGE_TEXT);
     }
 
     /**
