@@ -1,4 +1,4 @@
-@MyFirstCucumberFeature
+@RegressionAndroid @LoginLogout
 
 Feature: Login with correct values
   #Scenario 1
@@ -10,6 +10,7 @@ Feature: Login with correct values
     Then I see the email "<email>" in the profile screen
     Then I see the skypeId "<skypeId>" in the profile screen
     Then I see the location "<location>" in the profile screen
+	 And I finally Logout of App
 
     Examples:
       | username  | password | completeName   | email                  | skypeId      | location |

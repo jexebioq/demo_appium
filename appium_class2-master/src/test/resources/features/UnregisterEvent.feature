@@ -1,5 +1,5 @@
 @RegressionAndroid @UnRegisterEventTest
-Feature: Like a user registers on a event
+Feature: Like a user unregisters on a event
 
  #Scenario 1
   Scenario Outline: The user unregisters on a event
